@@ -31,7 +31,8 @@ class ShoppingCart: #Creates a class called ShoppingCart.
         return sum(item.quantity for item in self.cart_items) #Checks the quantity of items for each item in the cart and returns the sum to the user.
 
     def get_cost_of_cart(self): #Defines a function that will get the cost of each item in the cart.
-        return sum(item.price * item.quantity for item in self.cart_items) #Calculates the cost of each item in the cart by multiplying the item's price by its quantity. Then sums the total for all items.
+        return sum(item.price * item.quantity for item in self.cart_items) #Calculates the cost of each item in the cart by multiplying the item's price by its quantity.
+                                                                           #Then sums the total for all items.
 
     def print_total(self): #Defines a function that will print the total cost of the cart.
         if not self.cart_items: #Checks if the cart does not have an item
