@@ -13,7 +13,7 @@ class ShoppingCart: #Creates a class called ShoppingCart.
         self.cart_items = [] #creates a list that will store the items of the cart.
 
     def add_item(self, ItemToPurchase): #Defines a function that will add an ItemToPurchase object to the cart. Currently not implemented.
-            self.cart_items.append(item)
+            self.cart_items.append(ItemToPurchase)
 
     def remove_item(self, item_name): #Defines a function that will remove an item from the cart using its name.
         for item in self.cart_items: #checks every item in the current ShoppingCart.cart_items
@@ -82,12 +82,12 @@ def print_menu(Cart):
 #Creating a test case for the code to run
 #Each ItemToPurchase object has a name, price, quantity, description
 Apple = ItemToPurchase("Apple", 1.31, 3, "Just an apple")
-Figurine = ItemToPurchase("Figurine", 30.32, 1, "Despite everything, it's still you.")
+Figurine = ItemToPurchase("Figurine", 30.32, 1, "It calmly spins on its small stand.")
 Comalone = ItemToPurchase("Comalone", 15.51, 3, "Used to move around logs.")
 
 Raphaels_Cart = ShoppingCart("Raphael Juniel", "January 28, 2024",)
-Raphaels_Cart.cart_items.append(Apple)
-Raphaels_Cart.cart_items.append(Figurine)
-Raphaels_Cart.cart_items.append(Comalone)
+Raphaels_Cart.add_item(Apple)
+Raphaels_Cart.add_item(Figurine)
+Raphaels_Cart.add_item(Comalone)
 
 print_menu(Raphaels_Cart)
